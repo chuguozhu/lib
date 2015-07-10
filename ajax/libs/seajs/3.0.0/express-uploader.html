@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://www.npmjs.com/package/express-uploader -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; cursor: default }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: bold; }
+#powered-by-constructor-io { font-size: 0.8em; text-align:right; background-color:rgb(255,255,192); font-family:sans-serif; padding: 4px }
+.autocomplete-suggestion-image { float:left; padding-right: 10px }
+#autocomplete-direct-results:before { content:'Products' }
+#autocomplete-search-suggestions:before { content:'Search Suggestions' }</style>
+  <title>express-uploader</title>
+
+    <meta name="description" content="File uploads with NodeJS">
+    <meta name="keywords" content="trinte,uploading,uploader,middleware,upload,connect,express">
+    <meta name="twitter:url" content="https://www.npmjs.com/package/express-uploader">
+    <meta name="twitter:title" content="npm: express-uploader">
+    <meta name="twitter:description" content="File uploads with NodeJS">
+
+  <meta charset="utf-8">
+  <meta http-equiv="cleartype" content="on">
+
+  <meta name="apple-mobile-web-app-capable" content="no">
+  <meta name="description" content="npm is the package manager for javascript">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1,user-scalable=yes">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-startup-image-1024x748.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-startup-image-1536x2008.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-startup-image-2048x1496.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-startup-image-320x460.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-startup-image-640x1096.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-startup-image-640x920.png">
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-startup-image-768x1004.png">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/favicon-230x230.png" sizes="230x230">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/coast-228x228.png" sizes="228x228">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="https://www.npmjs.com/static/images/touch-icons/manifest.json">
+  <link rel="shortcut icon" href="https://www.npmjs.com/static/images/touch-icons/favicon.ico">
+  <link rel="yandex-tableau-widget" href="https://www.npmjs.com/static/images/touch-icons/yandex-browser-manifest.json">
+  <meta property="og:image" content="https://www.npmjs.com/static/images/touch-icons/open-graph.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileColor" content="#cb3837">
+  <meta name="msapplication-TileImage" content="/static/images/touch-icons/mstile-144x144.png">
+  <meta name="msapplication-config" content="/static/images/touch-icons/browserconfig.xml">
+  <meta name="theme-color" content="#cb3837">
+
+  <link rel="canonical" href="./express-uploader_files/express-uploader.html">
+  <link rel="stylesheet" media="all" href="https://www.npmjs.com/static/css/index.css">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://www.npmjs.com/opensearch.xml" title="npm">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700">
+
+  <script id="hs-analytics" src="./express-uploader_files/419727.js"></script><script async="" src="./express-uploader_files/analytics.js"></script><script defer="" src="./express-uploader_files/index.js"></script>
+  <script defer="" src="./express-uploader_files/vendor.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebSite" data-crumb="LN0O2JcQyEYaaaKuxDjf2BQeGJTlzS1EQ_kMr1LHR_3">
+  <meta itemprop="url" content="https://www.npmjs.com/">
+
+  <div id="notification-banner" style="display:none">
+    <div class="container">
+      <hgroup>
+        <a href="https://www.npmjs.com/private-modules" data-event-trigger="click" data-event-name="private-modules-banner-signup-via-wombat">
+          <img src="./express-uploader_files/wombat-by-night.svg" alt="night wombat">
+        </a>
+        <h2>private npm is here.</h2>
+        <h3>publish unlimited private modules for just $7/month</h3>
+      </hgroup>
+      <a class="button" href="https://www.npmjs.com/private-modules" data-event-trigger="click" data-event-name="private-modules-banner-signup">sign up</a>
+      <a class="button button-subtle banner-close" data-event-trigger="click" data-event-name="private-modules-banner-no-thanks">no thanks</a>
+    </div>
+  </div>
+
+  <nav>
+    <div class="container">
+      <a href="https://www.npmjs.com/package/express-uploader#" id="npm-expansions" data-event-trigger="click" data-event-name="npm-expansions">Nasal Pathway Melodrama</a>
+      <a href="https://www.npmjs.com/private-modules" data-event-trigger="click" data-event-name="private-modules-nav-link">npm private modules</a>
+      <a href="https://www.npmjs.com/enterprise">npm Enterprise</a>
+      <a href="https://docs.npmjs.com/">documentation</a>
+      <a href="http://blog.npmjs.org/">blog</a>
+      <a href="https://www.npmjs.com/npm-weekly">npm weekly</a>
+      <a href="https://www.npmjs.com/jobs">jobs</a>
+      <a href="https://www.npmjs.com/support">support</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <a href="https://www.npmjs.com/" id="npm-logo"><img src="./express-uploader_files/npm-logo.svg" alt="npm logo"></a>
+
+      <div id="user-info" class="anonymous">
+          <a href="https://www.npmjs.com/login"><img src="./express-uploader_files/wombat-avatar-small.png"></a>
+          <ul class="single">
+            <li><a href="https://www.npmjs.com/signup">sign up</a> or <a href="https://www.npmjs.com/login">log in</a></li>
+          </ul>
+
+      </div>
+
+      <form id="npm-search" action="https://www.npmjs.com/search" method="get" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+        <meta itemprop="target" content="https://www.npmjs.com/search?q={q}">
+        <input name="q" value="" type="search" id="site-search" placeholder="find packages" tabindex="1" autocorrect="off" autocapitalize="off" itemprop="query-input" autocomplete="off">
+        <input type="submit" id="site-search-submit">
+      </form>
+
+    </div>
+  </header>
+
+  <div class="container content">
+    
+<div class="content-column">
+
+  <h1 class="package-name">
+    <a href="./express-uploader_files/express-uploader.html" class="active">express-uploader</a>
+      <i class="icon-public"></i>
+  </h1>
+  <p class="package-description">File uploads with NodeJS</p>
+
+  <form class="star">
+    <input type="hidden" name="name" value="express-uploader">
+    <input id="star-input" type="checkbox" name="isStarred" value="true">
+    <label for="star-input" class="icon-star"></label>
+    <div class="honey">
+      <label>If you are a robot, enter text here</label>
+      <input type="text" name="honey">
+    </div>
+    
+      <input type="hidden" name="crumb" value="LN0O2JcQyEYaaaKuxDjf2BQeGJTlzS1EQ_kMr1LHR_3">
+  </form>
+
+  <div id="readme" class="markdown">
+      <h2 id="user-content-file-uploader" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#file-uploader">File uploader</a></h2>
+<p>Uploading files middleware for NodeJS, Express, TrinteJS, Connect.</p>
+<h2 id="user-content-installation" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#installation">Installation</a></h2>
+<p>Installation is done using the Node Package Manager (npm). If you don't have npm installed on your system you can download it from <a href="http://npmjs.org/">npmjs.org</a>
+To install express-uploader:</p>
+<pre><code>$ npm install -g express-uploader
+</code></pre>
+<h2 id="user-content-usage-overview" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#usage-overview">Usage overview</a></h2>
+<h3 id="user-content-for-trintejs" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#for-trintejs">for TrinteJS</a></h3>
+<h4 id="user-content-manual-setup-in-project-config-routes-js" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#manual-setup-in-project-config-routes-js">manual setup in project config/routes.js</a></h4>
+<pre><code class="highlight js"><pre class="editor editor-colors"><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="storage modifier js"><span>var</span></span><span>&nbsp;Uploader&nbsp;</span><span class="keyword operator js"><span>=</span></span><span>&nbsp;</span><span class="support function js"><span>require</span></span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>express-uploader</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="support variable js"><span>module</span></span><span class="meta delimiter method period js"><span>.</span></span><span>exports&nbsp;</span><span class="keyword operator js"><span>=</span></span><span>&nbsp;</span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span>&nbsp;</span><span class="entity name function js"><span>routes</span></span><span class="punctuation begin js"><span>(</span></span><span class="variable function js"><span>map</span></span><span class="punctuation end js"><span>)</span></span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta delimiter method period js"><span>.</span><span>.</span><span>.</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;map</span><span class="meta delimiter method period js"><span>.</span></span><span class="support constant js"><span>all</span></span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>/upload</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span class="punctuation begin js"><span>(</span></span><span class="variable function js"><span>req</span></span><span>,&nbsp;</span><span class="variable function js"><span>res</span></span><span>,&nbsp;</span><span class="variable function js"><span>next</span></span><span class="punctuation end js"><span>)</span></span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="storage modifier js"><span>var</span></span><span>&nbsp;uploader&nbsp;</span><span class="keyword operator js"><span>=</span></span><span>&nbsp;</span><span class="meta class instance constructor"><span class="keyword operator js"><span>new</span></span><span>&nbsp;</span><span class="entity name type instance js"><span>Uploader</span></span></span><span class="meta brace round js"><span>(</span></span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;debug</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="constant language boolean true js"><span>true</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;validate</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="constant language boolean true js"><span>true</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thumbnails</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="constant language boolean true js"><span>true</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thumbToSubDir</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="constant language boolean true js"><span>true</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmpDir</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="support variable js"><span>__dirname</span></span><span>&nbsp;</span><span class="keyword operator js"><span>+</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>/tmp</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;publicDir</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="support variable js"><span>__dirname</span></span><span>&nbsp;</span><span class="keyword operator js"><span>+</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>/public</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uploadDir</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="support variable js"><span>__dirname</span></span><span>&nbsp;</span><span class="keyword operator js"><span>+</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>/public/files</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uploadUrl</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>/files/</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thumbSizes</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace square js"><span>[</span></span><span class="constant numeric js"><span>140</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta brace square js"><span>[</span></span><span class="constant numeric js"><span>100</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="constant numeric js"><span>100</span></span><span class="meta brace square js"><span>]</span><span>]</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uploader</span><span class="meta delimiter method period js"><span>.</span></span><span>uploadFile</span><span class="meta brace round js"><span>(</span></span><span>req</span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span class="punctuation begin js"><span>(</span></span><span class="variable function js"><span>data</span></span><span class="punctuation end js"><span>)</span></span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res</span><span class="meta delimiter method period js"><span>.</span></span><span class="support function js"><span>send</span></span><span class="meta brace round js"><span>(</span></span><span>JSON</span><span class="meta delimiter method period js"><span>.</span></span><span>stringify</span><span class="meta brace round js"><span>(</span></span><span>data</span><span class="meta brace round js"><span>)</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>Content-Type</span><span class="punctuation string end js"><span>'</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>text/plain</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta brace curly js"><span>}</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="constant numeric js"><span>200</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span class="meta brace curly js"><span>}</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div></pre></code></pre>
+<h3 id="user-content-for-expressjs" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#for-expressjs">for ExpressJS</a></h3>
+<pre><code class="highlight js"><pre class="editor editor-colors"><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span class="storage modifier js"><span>var</span></span><span>&nbsp;Uploader&nbsp;</span><span class="keyword operator js"><span>=</span></span><span>&nbsp;</span><span class="support function js"><span>require</span></span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>express-uploader</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div><div class="line"><span class="source js"><span>app</span><span class="meta delimiter method period js"><span>.</span></span><span class="support constant js"><span>all</span></span><span class="meta brace round js"><span>(</span></span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>/upload</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span class="punctuation begin js"><span>(</span></span><span class="variable function js"><span>req</span></span><span>,&nbsp;</span><span class="variable function js"><span>res</span></span><span>,&nbsp;</span><span class="variable function js"><span>next</span></span><span class="punctuation end js"><span>)</span></span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="storage modifier js"><span>var</span></span><span>&nbsp;uploader&nbsp;</span><span class="keyword operator js"><span>=</span></span><span>&nbsp;</span><span class="meta class instance constructor"><span class="keyword operator js"><span>new</span></span><span>&nbsp;</span><span class="entity name type instance js"><span>Uploader</span></span></span><span class="meta brace round js"><span>(</span></span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;debug</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="constant language boolean true js"><span>true</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;validate</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="constant language boolean true js"><span>true</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thumbnails</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="constant language boolean true js"><span>true</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thumbToSubDir</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="constant language boolean true js"><span>true</span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmpDir</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="support variable js"><span>__dirname</span></span><span>&nbsp;</span><span class="keyword operator js"><span>+</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>/tmp</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;publicDir</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="support variable js"><span>__dirname</span></span><span>&nbsp;</span><span class="keyword operator js"><span>+</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>/public</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uploadDir</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="support variable js"><span>__dirname</span></span><span>&nbsp;</span><span class="keyword operator js"><span>+</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>/public/files</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uploadUrl</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>/files/</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta delimiter object comma js"><span>,</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thumbSizes</span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="meta brace square js"><span>[</span></span><span class="constant numeric js"><span>140</span></span><span class="meta delimiter object comma js"><span>,</span></span><span class="meta brace square js"><span>[</span></span><span class="constant numeric js"><span>100</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="constant numeric js"><span>100</span></span><span class="meta brace square js"><span>]</span><span>]</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;uploader</span><span class="meta delimiter method period js"><span>.</span></span><span>uploadFile</span><span class="meta brace round js"><span>(</span></span><span>req</span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta function js"><span class="storage type function js"><span>function</span></span><span class="punctuation begin js"><span>(</span></span><span class="variable function js"><span>data</span></span><span class="punctuation end js"><span>)</span></span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res</span><span class="meta delimiter method period js"><span>.</span></span><span class="support function js"><span>send</span></span><span class="meta brace round js"><span>(</span></span><span>JSON</span><span class="meta delimiter method period js"><span>.</span></span><span>stringify</span><span class="meta brace round js"><span>(</span></span><span>data</span><span class="meta brace round js"><span>)</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="meta brace curly js"><span>{</span></span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>Content-Type</span><span class="punctuation string end js"><span>'</span></span></span><span class="keyword operator js"><span>:</span></span><span>&nbsp;</span><span class="string quoted single js"><span class="punctuation string begin js"><span>'</span></span><span>text/plain</span><span class="punctuation string end js"><span>'</span></span></span><span class="meta brace curly js"><span>}</span></span><span class="meta delimiter object comma js"><span>,</span></span><span>&nbsp;</span><span class="constant numeric js"><span>200</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta brace curly js"><span>}</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span class="meta brace curly js"><span>}</span></span><span class="meta brace round js"><span>)</span></span><span class="punctuation terminator statement js"><span>;</span></span></span></div><div class="line"><span class="source js"><span>&nbsp;</span></span></div></pre></code></pre>
+<h2 id="user-content-options" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#options">Options</a></h2>
+<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Default
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody><tr>
+        <td>
+            debug
+        </td>
+        <td>
+            boolean
+        </td>
+        <td>
+            false
+        </td>
+        <td>
+<pre><code>    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        safeName
+    &lt;/td&gt;
+    &lt;td&gt;
+        boolean
+    &lt;/td&gt;
+    &lt;td&gt;
+        true
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        validate
+    &lt;/td&gt;
+    &lt;td&gt;
+        boolean
+    &lt;/td&gt;
+    &lt;td&gt;
+        false
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        thumbnails
+    &lt;/td&gt;
+    &lt;td&gt;
+        boolean
+    &lt;/td&gt;
+    &lt;td&gt;
+        false
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        thumbToSubDir
+    &lt;/td&gt;
+    &lt;td&gt;
+        boolean
+    &lt;/td&gt;
+    &lt;td&gt;
+        false
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        tmpDir
+    &lt;/td&gt;
+    &lt;td&gt;
+        string
+    &lt;/td&gt;
+    &lt;td&gt;
+        `/tmp`
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        publicDir
+    &lt;/td&gt;
+    &lt;td&gt;
+        string
+    &lt;/td&gt;
+    &lt;td&gt;
+       `/public` 
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        uploadDir
+    &lt;/td&gt;
+    &lt;td&gt;
+        string
+    &lt;/td&gt;
+    &lt;td&gt;
+        `/public/files`
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        uploadUrl
+    &lt;/td&gt;
+    &lt;td&gt;
+        string
+    &lt;/td&gt;
+    &lt;td&gt;
+        `/files/`
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        maxPostSize
+    &lt;/td&gt;
+    &lt;td&gt;
+        integer
+    &lt;/td&gt;
+    &lt;td&gt;
+        11000000
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        minFileSize
+    &lt;/td&gt;
+    &lt;td&gt;
+        integer
+    &lt;/td&gt;
+    &lt;td&gt;
+        1
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        maxFileSize
+    &lt;/td&gt;
+    &lt;td&gt;
+        integer
+    &lt;/td&gt;
+    &lt;td&gt;
+        10000000
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        acceptFileTypes
+    &lt;/td&gt;
+    &lt;td&gt;
+        regexp
+    &lt;/td&gt;
+    &lt;td&gt;
+        `/.+/i`
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        thumbSizes
+    &lt;/td&gt;
+    &lt;td&gt;
+        array
+    &lt;/td&gt;
+    &lt;td&gt;
+        [[100, 100]]
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;
+        imageTypes
+    &lt;/td&gt;
+    &lt;td&gt;
+        regexp
+    &lt;/td&gt;
+    &lt;td&gt;
+        `/\.(gif|jpe?g|png)$/i`
+    &lt;/td&gt;
+    &lt;td&gt;
+        
+    &lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+</td></tr></tbody></table>
+<h2 id="user-content-in-the-wild" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#in-the-wild">In the Wild</a></h2>
+<p>The following projects use express-uploader.</p>
+<p>If you are using express-uploader in a project, app, or module, get on the list below
+by getting in touch or submitting a pull request with changes to the README.</p>
+<h3 id="user-content-recommend-extensions" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#recommend-extensions">Recommend extensions</a></h3>
+<ul>
+<li><a href="http://biggora.github.io/bootstrap-fancyfile/">Bootstrap Fancy File Plugin</a></li>
+<li><a href="https://github.com/biggora/bootstrap-ajax-typeahead">Bootstrap Ajax Typeahead Plugin</a></li>
+<li><a href="http://www.trintejs.com/">TrinteJS - Javascrpt MVC Framework for Node.JS</a></li>
+<li><a href="http://www.camintejs.com/">CaminteJS - Cross-db ORM for NodeJS</a></li>
+<li><a href="https://github.com/biggora/express-mongodb">MongoDB Session Storage for ExpressJS</a></li>
+<li><a href="https://github.com/biggora/2co">2CO NodeJS adapter for 2checkout API payment gateway</a></li>
+</ul>
+<h3 id="user-content-startups-apps" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#startups-apps">Startups &amp; Apps</a></h3>
+<ul>
+<li><a href="http://tvimama.com/">TViMama</a></li>
+<li><a href="https://gorkatv.com/">GorkaTV</a></li>
+<li><a href="http://www.trintejs.com/">TrinteJS</a></li>
+<li><a href="http://www.camintejs.com/">CaminteJS</a></li>
+</ul>
+<h2 id="user-content-author" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#author">Author</a></h2>
+<p>Aleksej Gordejev (aleksej@gordejev.lv).</p>
+<h2 id="user-content-license" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#license">License</a></h2>
+<p>(The MIT License)</p>
+<p>Copyright (c) 2012 Aleksej Gordejev <a href="mailto:aleksej@gordejev.lv">aleksej@gordejev.lv</a></p>
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<h2 id="user-content-resources" class="deep-link"><a href="https://www.npmjs.com/package/express-uploader#resources">Resources</a></h2>
+<ul>
+<li>Visit the <a href="http://www.gordejev.lv/">author website</a>.</li>
+<li>Follow <a href="https://twitter.com/#!/biggora">@biggora</a> on Twitter for updates.</li>
+<li>Report issues on the <a href="https://github.com/biggora/express-uploader/issues">github issues</a> page.</li>
+</ul>
+<p><a href="https://github.com/igrigorik/ga-beacon"><img src="https://ga-beacon.appspot.com/UA-22788134-5/express-uploader/readme"></a></p>
+<p><a href="https://bitdeli.com/free"><img src="./express-uploader_files/trend.png"></a></p>
+
+  </div>
+
+</div>
+
+<div class="sidebar">
+
+    <div class="autoselect-wrapper npm-install icon-download">
+      <input type="text" value="npm i express-uploader" readonly="">
+    </div>
+
+	<ul class="box">
+
+      <li class="last-publisher">
+        <a href="https://www.npmjs.com/~biggora">
+          <img src="./express-uploader_files/1ac5581538d4f38be50d12463fb8dc52" alt="biggora">
+          <span>biggora</span>
+        </a>
+          published
+          <span data-date="2014-08-17T11:43:36.109Z" data-date-format="relative">11 months ago</span>
+      </li>
+
+    <li>
+      <strong>0.0.5</strong>
+      is the latest
+        of 5 releases
+    </li>
+
+      <li>
+        <a href="https://github.com/biggora/express-uploader">github.com/biggora/express-uploader</a>
+      </li>
+
+
+      <li>
+          <a href="http://opensource.org/licenses/MIT">MIT</a>
+        <span> license</span>
+      </li>
+
+  </ul>
+
+    <h3 title="collaborators">
+        <a href="https://www.npmjs.com/package/express-uploader/access">Collaborators</a>
+    </h3>
+
+    <ul class="humans collaborators">
+        <li>
+          <a href="https://www.npmjs.com/~biggora" rel="tipsy" original-title="biggora">
+            <img src="./express-uploader_files/1ac5581538d4f38be50d12463fb8dc52" alt="biggora">
+          </a>
+        </li>
+
+
+    </ul>
+
+  <h3>Stats</h3>
+  <ul class="box">
+
+      <li>
+        <strong class="pretty-number daily-downloads">0</strong>
+        downloads in the last day
+      </li>
+      <li>
+        <strong class="pretty-number weekly-downloads">5</strong>
+        downloads in the last week
+      </li>
+      <li>
+        <strong class="pretty-number monthly-downloads">30</strong>
+        downloads in the last month
+      </li>
+
+      <li id="issues" data-ghapi="https://api.github.com/repos/biggora/express-uploader">
+        <span class="original" style="display: none;">Have an issue? <a href="https://github.com/biggora/express-uploader/issues">2 open issues</a></span>
+          <span class="enhanced" style="">
+            <a href="https://github.com/biggora/express-uploader/issues">2 open issues</a> on GitHub
+          </span>
+      </li>
+
+      <li id="pull_requests" style="">
+        <a href="https://github.com/biggora/express-uploader/pulls">No open pull requests</a> on GitHub
+      </li>
+
+  </ul>
+
+  <h3>Keywords</h3>
+  <p class="list-of-links">
+        <a href="https://www.npmjs.com/browse/keyword/trinte">trinte</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/uploading">uploading</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/uploader">uploader</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/middleware">middleware</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/upload">upload</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/connect">connect</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/express">express</a>
+  </p>
+
+  <h3>Dependencies (2)</h3>
+  <p class="list-of-links">
+          <a href="https://www.npmjs.com/package/node-uuid">node-uuid</a>,
+                <a href="https://www.npmjs.com/package/gm">gm</a>
+  </p>
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "express-uploader",
+      "description": "File uploads with NodeJS",
+      "url": "https://www.npmjs.com/package/express-uploader",
+      "keywords": "trinte,uploading,uploader,middleware,upload,connect,express",
+      "applicationCategory": "DeveloperApplication",
+      "offers": {
+         "@type": "Offer",
+         "price": "0.00"
+      }
+    }
+  </script>
+
+  <div class="hiring-container" data-template="sidebar"><div class="ad">
+  <p>
+    <a href="https://www.lob.com/jobs" title="lob.com">lob.com</a> is hiring.
+    <a class="quiet" href="https://www.npmjs.com/whoshiring">View more…</a>
+  </p>
+</div></div>
+
+</div>
+
+
+  </div>
+
+  <footer>
+
+    <div class="container">
+
+      <ul class="columnar">
+        <li>
+          <h3>You Need Help</h3>
+          <ul class="links">
+            <li><a href="https://docs.npmjs.com/">Documentation</a></li>
+            <li><a href="https://www.npmjs.com/support">Support / Contact Us</a></li>
+            <li><a href="http://status.npmjs.org/">Registry Status</a></li>
+            <li><a href="https://github.com/npm/newww/issues">Website Issues</a></li>
+            <li><a href="https://github.com/npm/npm/issues">CLI Issues</a></li>
+            <li><a href="https://www.npmjs.com/security">Security</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>About npm</h3>
+          <ul class="links">
+            <li><a href="https://www.npmjs.com/about">About npm, Inc</a></li>
+            <li><a href="https://www.npmjs.com/jobs">Jobs</a></li>
+            <li><a href="https://www.npmjs.com/private-modules">npm private modules</a></li>
+            <li><a href="http://blog.npmjs.org/">Blog</a></li>
+            <li><a href="https://twitter.com/npmjs">Twitter</a></li>
+            <li><a href="https://github.com/npm">GitHub</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Legal Stuff</h3>
+          <ul class="links">
+            <li><a href="https://www.npmjs.com/policies/conduct">Code of Conduct</a></li>
+            <li><a href="https://www.npmjs.com/policies/disputes">Package Name Disputes</a></li>
+            <li><a href="https://www.npmjs.com/policies/npm-license">npm License</a></li>
+            <li><a href="https://www.npmjs.com/policies/privacy">Privacy Policy</a></li>
+            <li><a href="https://www.npmjs.com/policies/receiving-reports">Reporting Abuse</a></li>
+            <li><a href="https://www.npmjs.com/policies/trademark">Trademark Policy</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="container centered">
+      <a href="https://www.npmjs.com/" id="npm-loves-you">
+        npm loves you
+      </a>
+    </div>
+
+  </footer>
+  
+
+
+
+<!-- pid=7604 6537654942f9443c635c3fec1a18e4fb9ea362b1 https://www.npmjs.com www-9-west.internal.npmjs.com  -->
+<div class="autocomplete-suggestions" style="position: absolute; display: none; width: 533px; max-height: 400px; z-index: 9999;"></div></body></html>
