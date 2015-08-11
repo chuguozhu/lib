@@ -13,3 +13,4 @@ var app = connect()
     static: true
   }))
   .listen(1111);
+  console.log('127.0.0.1:1111')
