@@ -7,7 +7,7 @@ var dir = path.join(__dirname, '/');
 var app = connect()
   .use(combo({
     directory: dir,
-    proxy: 'https://cdnjs.cloudflare.com/ajax/libs/',
+    proxy: 'http://g.alicdn.com/',
     cache: true,
     log: true,
     static: true
