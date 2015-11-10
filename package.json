@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "connect": "^3.4.0",
+    "connect-combo": "^0.3.1"
+  }
+}
